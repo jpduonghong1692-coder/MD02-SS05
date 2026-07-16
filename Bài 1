@@ -1,0 +1,14 @@
+SELECT student_id, UPPER(full_name) AS full_name
+FROM students;
+
+SELECT full_name, YEAR(CURDATE()) - birth_year AS age
+FROM students;
+
+SELECT student_id, ROUND(score, 1) AS average_score
+FROM students;
+
+SELECT 
+    COUNT(*) AS total_students,
+    MAX(score) AS highest_score,
+    MIN(score) AS lowest_score
+FROM students;
